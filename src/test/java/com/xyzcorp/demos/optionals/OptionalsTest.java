@@ -1,13 +1,9 @@
 package com.xyzcorp.demos.optionals;
 
-import com.xyzcorp.demos.collections.CollectionsTest;
-import com.xyzcorp.demos.generics.people.Person;
 import org.junit.Test;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
