@@ -14,7 +14,7 @@ public class FunctionExercises {
      */
     @Test
     void testSampleWithStandardJUnit() {
-        var result = Math.max(40, 3);
+        int result = Math.max(40, 3);
         assertEquals(40, result);
     }
 
@@ -26,7 +26,7 @@ public class FunctionExercises {
      */
     @Test
     void testSampleWithStandardJUnitAndAssertJAssertion() {
-        var result = Math.max(40, 3);
+        int result = Math.max(40, 3);
         assertThat(result).isEqualTo(40);
     }
 }

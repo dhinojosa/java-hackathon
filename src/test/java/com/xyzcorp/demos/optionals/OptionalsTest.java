@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
+import java.util.Random;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -34,7 +35,7 @@ public class OptionalsTest {
     }
 
     private String getSomethingRandomlyNull() {
-        var random = new java.util.Random();
+        Random random = new java.util.Random();
         if (random.nextBoolean()) {
             return "Foo";
         } else {

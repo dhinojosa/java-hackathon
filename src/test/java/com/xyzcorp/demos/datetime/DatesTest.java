@@ -21,7 +21,7 @@ public class DatesTest {
     @Test
     public void testChronoUnitAddToInstant() {
         Instant instant = Instant.now();
-        var instantPlus19Days = instant.plus(19, ChronoUnit.DAYS);
+        Instant instantPlus19Days = instant.plus(19, ChronoUnit.DAYS);
         System.out.println(instantPlus19Days);
     }
 

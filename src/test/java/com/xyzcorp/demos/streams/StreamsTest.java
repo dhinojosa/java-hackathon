@@ -1,9 +1,7 @@
 package com.xyzcorp.demos.streams;
 
 import org.junit.Test;
-import org.junit.jupiter.api.Disabled;
 
-import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.*;
@@ -236,7 +234,7 @@ public class StreamsTest {
 
     @Test
     public void testFlatMapAsCleaner() {
-        var result =
+        List<Character> result =
             Stream.of("Apple", "Orange", "", "Banana", "Tomato", "Grapes", "")
                   .map(s -> safeCharAt(s, 0))
                   .flatMap(Optional::stream)
@@ -467,22 +465,22 @@ public class StreamsTest {
     }
 
     private List<Order> createFakeOrders() {
-        var order1 = new Order("Bob", "Hanson", "Redwood City", "CA");
-        var orderItems1 = List.of(new OrderItem(2, new Product("Soap", 3),
+        Order order1 = new Order("Bob", "Hanson", "Redwood City", "CA");
+        List<OrderItem> orderItems1 = List.of(new OrderItem(2, new Product("Soap", 3),
                 order1),
             new OrderItem(5, new Product("Bread", 4), order1),
             new OrderItem(1, new Product("Toothbrush", 9), order1));
 
-        var order2 = new Order("Clara", "Jimenez", "Atlanta", "GA");
-        var orderItems2 = List.of(new OrderItem(1, new Product("Brush", 5),
+        Order order2 = new Order("Clara", "Jimenez", "Atlanta", "GA");
+        List<OrderItem> orderItems2 = List.of(new OrderItem(1, new Product("Brush", 5),
                 order2),
             new OrderItem(5, new Product("Milk", 2), order2),
             new OrderItem(1, new Product("Soap", 9), order2),
             new OrderItem(2, new Product("Notebooks", 4), order2),
             new OrderItem(3, new Product("Pens", 2), order2));
 
-        var order3 = new Order("Pratik", "Agarwal", "Los Angeles", "CA");
-        var orderItems3 = List.of(
+        Order order3 = new Order("Pratik", "Agarwal", "Los Angeles", "CA");
+        List<OrderItem> orderItems3 = List.of(
             new OrderItem(5, new Product("Notebooks", 4), order3),
             new OrderItem(5, new Product("Pens", 2), order3),
             new OrderItem(1, new Product("Shampoo", 5), order2),
